@@ -1,0 +1,23 @@
+body {
+    font-family: 'Calibri Light', sans-serif;
+    background-color: #f2f2f2;
+}
+.container {
+    background-color: #fff;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.weather-data {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+.weather-data div {
+    text-align: center;
+}
+.temp {
+    font-size: 4rem;
+}
