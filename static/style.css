@@ -21,3 +21,31 @@ body {
 .temp {
     font-size: 4rem;
 }
+
+.about-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+.about-info div {
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-left: 30px; /* Adiciona um espaço à esquerda da imagem */
+}
+.about-info img {
+    width: 200px; /* Define o tamanho da imagem */
+    height: 200px;
+}
+.about-info h2 {
+    margin-bottom: 10px;
+}
+.about-info p {
+    margin-bottom: 15px;
+}
+.about-info a {
+    color: #007bff; /* Cor do link azul */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+.about-info a:hover {
+    text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse */
+}
