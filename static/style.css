@@ -49,3 +49,17 @@ body {
 .about-info a:hover {
     text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse */
 }
+
+.footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
