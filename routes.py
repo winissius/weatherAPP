@@ -9,4 +9,4 @@ def homepage():
 
 @app.route("/info")
 def info():
-    return "<p>infos</p>"
+    return render_template("info.html")
