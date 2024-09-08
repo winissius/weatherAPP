@@ -8,6 +8,10 @@
 <body>
     <div class="container">
         <h1 style="text-align:center">Weather App</h1>
+        <div class="search">
+            <input type="text" placeholder="Search city" class="search-bar" />
+            <button class="search-button"><img src="{{ url_for('static', filename='icons/lupa.svg') }}" alt="Ícone de Lupa"></button>
+        </div>
         <div class="weather-data">
             <div>
                 <p>City: <span id="city"></span></p>
