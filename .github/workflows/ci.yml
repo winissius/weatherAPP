@@ -26,8 +26,3 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - uses: lob/action_sam_jackson@0.0.2
-        with:
-          message: 'Olar'
-          token: ${{secrets.GITHUB_TOKEN}}
-
