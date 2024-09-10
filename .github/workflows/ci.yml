@@ -1,0 +1,17 @@
+name: Continuous Integration
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  build: # nome
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+        # ate aqui é o pseudo-padrao
+        # baixa o código a VM do workflow ??????
+        
+      - name: Super-Linter
+        uses: super-linter/super-linter@v7.1.0
+        # mais indicado que o pilint pois o codigo é multi-linguagem de programação
