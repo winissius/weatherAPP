@@ -14,9 +14,6 @@ jobs:
         # ate aqui é o pseudo-padrao
         # baixa o código a VM do workflow ??????
         
-      - name: Super-Linter
-        uses: super-linter/super-linter@v7.1.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Define a variável de ambiente GITHUB_TOKEN
-        # mais indicado que o pilint pois o codigo é multi-linguagem de programação
-        # configurado o acesso ao GITHUB_TOKEN
+      - name: Python Lint Code Scanning Action
+        uses: advanced-security/python-lint-code-scanning-action@v1.1.1
+
