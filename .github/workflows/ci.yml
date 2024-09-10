@@ -1,0 +1,17 @@
+name: Continuous Integration
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  build: # nome
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+        # ate aqui é o pseudo-padrao
+        # baixa o código a VM do workflow ??????
+        
+      - name: Python Lint Code Scanning Action
+        uses: advanced-security/python-lint-code-scanning-action@v1.1.1
+
