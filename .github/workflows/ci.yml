@@ -26,7 +26,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - uses: anishathalye/proof-html@v2 # html e css check e testa
+      - uses: lob/action_sam_jackson@0.0.2
         with:
-          directory: ./templates
+          message: '<Olar />'
+          token: ${{secrets.GITHUB_TOKEN}}
 
