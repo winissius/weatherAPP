@@ -19,3 +19,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Define a variável de ambiente GITHUB_TOKEN
         # mais indicado que o pilint pois o codigo é multi-linguagem de programação
+        # configurado o acesso ao GITHUB_TOKEN
