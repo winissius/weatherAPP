@@ -28,6 +28,6 @@ jobs:
 
       - uses: lob/action_sam_jackson@0.0.2
         with:
-          message: '<Olar />'
+          message: 'Olar'
           token: ${{secrets.GITHUB_TOKEN}}
 
