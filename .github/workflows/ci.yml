@@ -6,14 +6,13 @@ on:
 jobs:
   build: # nome
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Define a variável de ambiente GITHUB_TOKEN
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
         # ate aqui é o pseudo-padrao
         # baixa o código a VM do workflow ??????
         
-      - name: Super-Linter
-        uses: super-linter/super-linter@v7.1.0
+      - name: MegaLinter
+        uses: oxsecurity/megalinter@v8.0.0
+
         # mais indicado que o pilint pois o codigo é multi-linguagem de programação
