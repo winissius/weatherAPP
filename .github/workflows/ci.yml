@@ -28,8 +28,5 @@ jobs:
 
       - uses: anishathalye/proof-html@v2 # html e css check e testa
         with:
-<<<<<<< HEAD
           directory: ./templates
-=======
-          directory: ./site
->>>>>>> a072ffbaf6382d654084cf6d663c58bbe508e264
+
