@@ -26,3 +26,5 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: TestForest Dashboard
+        uses: test-summary/action@v2.4
