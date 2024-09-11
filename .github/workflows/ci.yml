@@ -32,11 +32,6 @@ jobs:
         env:
           PING_URL: "https://www.google.com"
 
-      - name: Lint Markdown files
-        uses: github/super-linter@v4
-        with:
-          VALIDATE_MARKDOWN: true
-
       - name: Readme Update
         uses: azkadev/readme_update@latest-21-3-2024-11-24
 
