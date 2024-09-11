@@ -29,8 +29,8 @@ jobs:
 
       - name: Ping URL
         uses: nerdify/ping-action@1.0.0
-        with:
-          host: google.com
+        env:
+          PING_URL: "https://www.google.com"
 
 
 
