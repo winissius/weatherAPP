@@ -26,8 +26,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Test Summary
-        uses: test-summary/action@v2
+      - name: Check code formatting with Black
+        uses: psf/black@stable
         with:
-          paths: "tests/results.xml"
-        if: always()
+          args: --check .
+
+
