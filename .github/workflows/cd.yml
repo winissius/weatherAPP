@@ -2,11 +2,10 @@ name: Continuous Delivery
 on:
   push:
     branches:
-      - main # ou qualquer outra branch
+      - main
 
 jobs:
   deliver:
-    needs: [build]
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
