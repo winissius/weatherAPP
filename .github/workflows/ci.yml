@@ -32,6 +32,7 @@ jobs:
         env:
           PING_URL: "https://www.google.com"
 
+      # action que verifica vulnerabilidade nas dependencias
       - name: 'Checkout Repository'
         uses: actions/checkout@v4
       - name: 'Dependency Review'
