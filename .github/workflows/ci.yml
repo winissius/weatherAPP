@@ -32,8 +32,10 @@ jobs:
         env:
           PING_URL: "https://www.google.com"
 
-      - name: Profile Readme Development Stats
-        uses: anmol098/waka-readme-stats@v4
+      - name: 'Checkout Repository'
+        uses: actions/checkout@v4
+      - name: 'Dependency Review'
+        uses: actions/dependency-review-action@v4
 
 
 
