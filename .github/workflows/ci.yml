@@ -26,3 +26,18 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      # uma action que faz um ping em um site a escolha, pode inclusive ser salvo como SECRET
+      - name: Ping URL
+        uses: nerdify/ping-action@1.0.0
+        env:
+          PING_URL: "https://www.google.com"
+
+      # action que verifica vulnerabilidade nas dependencias
+      - name: 'Checkout Repository'
+        uses: actions/checkout@v4
+      - name: 'Dependency Review'
+        uses: actions/dependency-review-action@v4
+
+
+
+
