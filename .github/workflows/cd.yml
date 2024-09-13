@@ -11,8 +11,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Download Build Artifact
+        uses: actions/download-artifact@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          name: build-artifact
