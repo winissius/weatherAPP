@@ -32,6 +32,12 @@ jobs:
         env:
           PING_URL: "https://www.google.com"
 
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+
       # action que verifica vulnerabilidade nas dependencias
       - name: 'Checkout Repository'
         uses: actions/checkout@v4
