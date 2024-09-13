@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="container">
+        <div class="search">
+            <input type="text" placeholder="Search city" class="search-bar" />
+            <button class="search-button"><img src="{{ url_for('static', filename='icons/lupa.svg') }}" alt="Ícone de Lupa"></button>
+        </div>
+        <h1 style="text-align:center">Weather App</h1>
+        <form action="/weather" method="post">
+            <div class="search">
+                <input type="text" name="city" placeholder="Search city" class="search-bar" required />
+                <button type="submit" class="search-button"><img src="{{ url_for('static', filename='icons/lupa.svg') }}" alt="Ícone de Lupa"></button>
+            </div>
+        </form>
+        <div class="weather-data">
+            {% if weather_data %}
+                {% if weather_data.city %}
+                <div>
+                    <p>City: <span id="city">{{ weather_data.city }}</span></p>
+                    <p>Country: <span id="country">{{ weather_data.country }}</span></p>
+                    <p>Temperature: <span class="temp" id="temp">{{ weather_data.temperature }}</span> °C</p>
+                </div>
+                <div>
+                    <p>Conditions: <span id="conditions">{{ weather_data.weather }}</span></p>
+                </div>
+                {% elif weather_data.error %}
+                <p>{{ weather_data.error }}</p>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+    <footer class="footer">
+        <p>© 2023 Weather App. Developed by <a href="/info">Winissius Machado</a>.</p>
+    </footer>
+</body>
+</html>

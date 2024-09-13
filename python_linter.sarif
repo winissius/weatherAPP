@@ -1,0 +1,129 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Flake8",
+          "rules": [
+            {
+              "id": "flake8/F403",
+              "shortDescription": {
+                "text": "'from module import *' used; unable to detect undefined names"
+              }
+            },
+            {
+              "id": "flake8/F401",
+              "shortDescription": {
+                "text": "Module imported but unused"
+              }
+            },
+            {
+              "id": "flake8/E402",
+              "shortDescription": {
+                "text": "Module level import not at top of file"
+              }
+            },
+            {
+              "id": "flake8/E501",
+              "shortDescription": {
+                "text": "Line too long"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "flake8/F403",
+          "level": "note",
+          "message": {
+            "text": "'from routes import *' used; unable to detect undefined names"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///home/runner/work/weatherAPP/weatherAPP/main.py"
+                },
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 1,
+                  "endLine": 5,
+                  "endColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "flake8/F401",
+          "level": "note",
+          "message": {
+            "text": "'routes.*' imported but unused"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///home/runner/work/weatherAPP/weatherAPP/main.py"
+                },
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 1,
+                  "endLine": 5,
+                  "endColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "flake8/E402",
+          "level": "note",
+          "message": {
+            "text": "module level import not at top of file"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///home/runner/work/weatherAPP/weatherAPP/main.py"
+                },
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 1,
+                  "endLine": 5,
+                  "endColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "flake8/E501",
+          "level": "note",
+          "message": {
+            "text": "line too long (107 > 79 characters)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///home/runner/work/weatherAPP/weatherAPP/weather.py"
+                },
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 80,
+                  "endLine": 11,
+                  "endColumn": 80
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
