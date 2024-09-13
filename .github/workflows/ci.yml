@@ -32,17 +32,17 @@ jobs:
         env:
           PING_URL: "https://www.google.com"
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
-
       # action que verifica vulnerabilidade nas dependencias
       - name: 'Checkout Repository'
         uses: actions/checkout@v4
       - name: 'Dependency Review'
         uses: actions/dependency-review-action@v4
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-artifact
+          path: ./build
 
 
 
