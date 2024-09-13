@@ -38,12 +38,3 @@ jobs:
       - name: 'Dependency Review'
         uses: actions/dependency-review-action@v4
 
-      - name: Upload Build Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-artifact
-          path: ./
-
-
-
-
