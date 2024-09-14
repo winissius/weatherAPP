@@ -16,7 +16,7 @@ COPY . .
 # COPY .env .env
 
 # Expoe porta 5000
-EXPOSE 5000
+EXPOSE 50000
 
 # variavel de ambiente como dev, poe ser production
 ENV FLASK_ENV=development
