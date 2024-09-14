@@ -13,7 +13,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Copia o arquivo .env para o container
-COPY .env .env
+COPY .env ./
 
 # Expoe porta 5000
 EXPOSE 5000
