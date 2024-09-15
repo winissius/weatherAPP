@@ -35,6 +35,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
-          push: True # enviando para o dockerhub
+          push: true # enviando para o dockerhub
           tags: user/app:latest
 
