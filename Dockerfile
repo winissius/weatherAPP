@@ -12,14 +12,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-# Copia o arquivo .env para o container
+# se provou nao necessario, o COPY . . já faz tudo isso.
 # COPY .env .env
 
 # Expoe porta 5000
-EXPOSE 50000
-
-# variavel de ambiente como dev, poe ser production
-ENV FLASK_ENV=development
+# EXPOSE 5000
 
 # Define o ponto de entrada para rodar a aplicação Flask
 CMD ["python", "main.py"]
