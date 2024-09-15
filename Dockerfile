@@ -15,8 +15,5 @@ COPY . .
 # se provou nao necessario, o COPY . . já faz tudo isso.
 # COPY .env .env
 
-# Expoe porta 5000
-# EXPOSE 5000
-
 # Define o ponto de entrada para rodar a aplicação Flask
 CMD ["python", "main.py"]
