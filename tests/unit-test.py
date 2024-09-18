@@ -53,6 +53,15 @@ def test_get_weather_fail():
         assert result == {'error': 'City not found'} # if result is none get_weather received a invalid city
 
 
+def test_get_weather_invalid_city_empty():
+    result = get_weather('')
+    assert result == {'error': 'City not found'}
+
+
+def test_get_weather_invalid_city_non_string():
+    result = get_weather(123)
+    assert result == {'error': 'City not found'}
+
 def test_info():
     with app.test_client() as client:
         response = client.get('/info')
