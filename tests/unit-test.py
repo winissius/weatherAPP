@@ -50,11 +50,11 @@ def test_get_weather_fail():
         mock_get.return_value.json.return_value = {'cod': '404', 'message': 'City not found'}
 
         result = get_weather('InvalidCity')
-        assert result is None # if result is none get_weather received a invalid city
+        assert result == {'error': 'City not found'} # if result is none get_weather received a invalid city
 
 
 def test_info():
     with app.test_client() as client:
         response = client.get('/info')
         assert response.status_code == 200  # ok response
-        print(response.status_code)
+        # print(response.status_code)
