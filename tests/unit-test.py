@@ -3,32 +3,33 @@ from weather import *
 from unittest.mock import patch
 
 
-# Create a cliant for tests, it's a native mode for tests in Flask
+# Create a client for tests, it's a native mode for tests in Flask
 def client(self):
     self.app = app.test_client()
     self.app.test = True
 
 
-def test_index():
+def test_index(): # test index/homepage
     with app.test_client() as client:
         response = client.get('/')
         assert response.status_code == 200  # ok response
         print(response.status_code)
 
 
-def test_weather_status():
+def test_weather_status(): # test rendering page with post method for data
     with app.test_client() as client:
         response = client.post('/weather', data={'city': 'London'})
         assert response.status_code == 200  # ok response
 
 
 def test_get_weather_success():
-    # data for run the funcion get_weather()
+    # data for run the funcion get_weather() - data input
     expected_value = {'cod': 200,
                       'name': 'London',
                      'sys': {'country': 'GB'},
                       'main': {'temp': 15.5},
                      'weather': [{'main': 'Clouds'}]}
+    # result expected - data output
     expected_result = {
         'city': 'London',
         'country': 'GB',
@@ -57,7 +58,7 @@ def test_get_weather_invalid_city_non_string(): # check numeric field
     assert result == {'error': 'City not found'}
 
 
-def test_info():
+def test_info(): # test info page
     with app.test_client() as client:
         response = client.get('/info')
         assert response.status_code == 200  # ok response
